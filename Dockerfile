@@ -5,7 +5,9 @@ apt-get update && \
 apt-get install --no-install-recommends --no-install-suggests -yqq \
   dnsutils \
   iputils-ping \
-  libc-dev && \
+  libc-dev \
+  libsqlite3-dev \
+  libpq-dev && \
 cd /tmp && \
 git clone https://github.com/crystal-community/icr.git && \
 cd icr && \
