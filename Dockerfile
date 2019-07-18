@@ -9,7 +9,9 @@ apt-get install --no-install-recommends --no-install-suggests -yqq \
   libc-dev \
   libpq-dev \
   libsqlite3-dev \
+  netcat-traditional \
   ngrep \
+  nmap \
   mc \
   tmux \
   vim-nox \
