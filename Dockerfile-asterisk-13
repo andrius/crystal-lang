@@ -1,0 +1,12 @@
+FROM andrius/crystal-lang
+
+LABEL maintainer="Andrius Kairiukstis <k@andrius.mobi>"
+
+EXPOSE 5060/udp 5060/tcp
+
+ENV ASTERISK_VERSION 13-current
+ENV OPUS_CODEC       asterisk-13.0/x86-64/codec_opus-13.0_current-x86_64
+
+COPY asterisk/build-asterisk.sh /
+RUN /build-asterisk.sh
+

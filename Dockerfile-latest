@@ -1,8 +1,11 @@
-FROM crystallang/crystal:0.29.0-build
+FROM crystallang/crystal:0.30.0-build
+
+LABEL maintainer="Andrius Kairiukstis <k@andrius.mobi>"
 
 RUN \
 apt-get update && \
-apt-get install --no-install-recommends --no-install-suggests -yqq \
+DEBIAN_FRONTEND=noninteractive \
+apt-get install -yqq --no-install-recommends --no-install-suggests \
   curl \
   dnsutils \
   iputils-ping \
