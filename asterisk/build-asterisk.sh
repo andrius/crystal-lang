@@ -177,23 +177,23 @@ cd /
 rm -rf /usr/src/asterisk \
        /usr/src/codecs
 
-# remove *-dev packages
-devpackages=`dpkg -l|grep '\-dev'|awk '{print $2}'|xargs`
-SUDO_FORCE_REMOVE=yes DEBIAN_FRONTEND=noninteractive apt-get --yes purge \
-  autoconf \
-  build-essential \
-  bzip2 \
-  cpp \
-  gnupg2 \
-  m4 \
-  make \
-  patch \
-  perl \
-  perl-modules \
-  pkg-config \
-  sudo \
-  xz-utils \
-  ${devpackages}
+# # remove *-dev packages
+# devpackages=`dpkg -l|grep '\-dev'|awk '{print $2}'|xargs`
+# SUDO_FORCE_REMOVE=yes DEBIAN_FRONTEND=noninteractive apt-get --yes purge \
+#   autoconf \
+#   build-essential \
+#   bzip2 \
+#   cpp \
+#   gnupg2 \
+#   m4 \
+#   make \
+#   patch \
+#   perl \
+#   perl-modules \
+#   pkg-config \
+#   sudo \
+#   xz-utils \
+#   ${devpackages}
 rm -rf /var/lib/apt/lists/*
 
 exec rm -f /build-asterisk.sh

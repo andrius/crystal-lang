@@ -16,6 +16,9 @@ for TAG in "${TAGS[@]}"; do
   docker push ${IMAGE}
 done
 
-# docker rmi -f andrius/crystal-lang:asterisk \
-#               $(grep FROM Dockerfile-* | cut -d' ' -f 2 | uniq)
+docker tag andrius/crystal-lang:asterisk-16 andrius/crystal-lang:asterisk
+docker push andrius/crystal-lang:asterisk
+
+docker rmi -f andrius/crystal-lang:asterisk \
+              $(grep FROM Dockerfile-* | cut -d' ' -f 2 | uniq)
 
