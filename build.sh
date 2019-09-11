@@ -5,7 +5,10 @@ set -ex
 TAGS=(latest \
       asterisk-16 \
       asterisk-13 \
+      asterisk-11 \
 )
+
+# TAGS=( asterisk-11 )
 
 for TAG in "${TAGS[@]}"; do
   IMAGE="andrius/crystal-lang:${TAG:-latest}"

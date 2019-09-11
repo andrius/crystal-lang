@@ -9,6 +9,7 @@ apt-get install -yqq --no-install-recommends --no-install-suggests \
   curl \
   dnsutils \
   iputils-ping \
+  jq \
   libc-dev \
   libpq-dev \
   libsqlite3-dev \
@@ -16,6 +17,7 @@ apt-get install -yqq --no-install-recommends --no-install-suggests \
   ngrep \
   nmap \
   mc \
+  tcpdump \
   tmux \
   vim-nox \
 && : \

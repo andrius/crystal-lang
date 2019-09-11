@@ -1,0 +1,11 @@
+FROM andrius/crystal-lang
+
+LABEL maintainer="Andrius Kairiukstis <k@andrius.mobi>"
+
+EXPOSE 5060/udp 5060/tcp
+
+ENV ASTERISK_VERSION 11.25.3
+
+COPY asterisk/build-asterisk-11.sh /build-asterisk.sh
+RUN /build-asterisk.sh
+
