@@ -1,4 +1,4 @@
-FROM crystallang/crystal:0.30.1-build
+FROM crystallang/crystal:0.31.0-build
 
 LABEL maintainer="Andrius Kairiukstis <k@andrius.mobi>"
 
